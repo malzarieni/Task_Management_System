@@ -189,3 +189,36 @@
 .edit-btn:hover{
 	opacity: .6;
 }
+.form-1  {
+	width: 90%;
+	max-width: 500px;
+}
+.input-holder label {
+	display: block;
+
+}
+.input-1 {
+	width: 100%;
+	border: 2px solid #ccc;
+	padding: 10px;
+	font-size: 15px;
+	outline: none;
+	border-radius: 5px;
+	display: block;
+}
+
+.input-1:focus{
+	border-color: #555;
+}
+.danger {
+	background: #FF98AA;
+	color: 	#B20008;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+.success {
+	background: darkgreen;
+	color: 	lightgreen;
+	padding: 10px;
+	margin-bottom: 10px;
+}

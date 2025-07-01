@@ -18,6 +18,7 @@ if (isset($_SESSION['role']) && isset($_SESSION['id'])) {
 
 		</section>
 	</div>
+	
 </body>
 </html>
 <?php }else{

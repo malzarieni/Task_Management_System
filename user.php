@@ -18,9 +18,14 @@ if (isset($_SESSION['role']) && isset($_SESSION['id'])) {
 	<div class="body">
 		<?php include "inc/nav.php"?>
 		<section class="section-1">
-			<h4 class="title">Manage Users <a href="add-user.php">Add User</a></h4> 
+			<h4 class="title">Manage Users <a href="add-user.php">Add User</a></h4>
+			<?php if (isset($_GET['success'])) {?>
+      	  	<div class="success" role="alert">
+			  <?php echo stripcslashes($_GET['success']); ?>
+			</div>
+			<?php } ?> 
 			<?php 
-			if ($users != 0) { ?>
+			if (!empty($users)) { ?>
 			<table class="main-table">
 				<tr>
 					<th>#</th>
@@ -43,8 +48,8 @@ if (isset($_SESSION['role']) && isset($_SESSION['id'])) {
 				<?php } ?>
 			</table>
 		<?php }else{ ?>
-			<h3>Empty</h3>
-		<?php }?>	
+			<h3>Empty </h3>
+		<?php } ;?>	
 		</section>
 	</div>
 
