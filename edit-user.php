@@ -59,7 +59,7 @@ if (isset($_SESSION['role']) && isset($_SESSION['id']) && $_SESSION['role'] == "
 					<label>Password</label>
 					<input type="text" value="*****" name="password" class="input-1" placeholder="Password"><br>
 				</div>
-				<input type="text" name="id" value="<?=$user['id']?> " hidden>
+				<input type="text" name="id" value="<?=$user['id']?>" hidden>
 
 				<button class="edit-btn">Update</button>
 			</form>
