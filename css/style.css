@@ -222,3 +222,21 @@
 	padding: 10px;
 	margin-bottom: 10px;
 }
+
+.profile-info {
+	padding: 10px;
+	font-size: 22px;
+}
+
+
+.main-table-2, .main-table-2 tr, .main-table-2 th, .main-table-2 td {
+	border: 3px solid #000000;
+	border-collapse: collapse;
+	padding: 8px;
+}
+
+.main-table-2 {
+	width: 90%;
+	margin-top: 30px;
+	background: #faeaac;
+}
