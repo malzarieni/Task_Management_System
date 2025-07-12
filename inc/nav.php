@@ -19,7 +19,7 @@
 			<! --Employee Navigation Bar -->
 			<ul id="navList">
 				<li>
-					<a href="#">
+					<a href="index.php">
 						<i class="fa fa-cube" aria-hidden="true"></i>
 						<span>Dashboard</span>
 					</a>
@@ -53,7 +53,7 @@
 			<! --Admin Navigation Bar -->	
 			<ul id="navList">
 				<li>
-					<a href="#">
+					<a href="index.php">
 						<i class="fa fa-cube" aria-hidden="true"></i>
 						<span>Dashboard</span>
 					</a>

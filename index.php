@@ -1,6 +1,14 @@
 <?php
 session_start(); 
 if (isset($_SESSION['role']) && isset($_SESSION['id'])) {
+	include "DB_connection.php";
+	include "app/Model/Task.php";
+	include "app/Model/User.php";
+	$duetoday_task = count_tasks_due_today($conn);
+	$nodeadline_task = count_tasks_noDeadline($conn);
+	$overdue_task = count_tasks_overdue($conn);
+	$c_task = count_tasks($conn);
+	$num_users = count_users($conn);
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,6 +23,34 @@ if (isset($_SESSION['role']) && isset($_SESSION['id'])) {
 	<div class="body">
 		<?php include "inc/nav.php"?>
 		<section class="section-1">
+			<?php if($_SESSION['role'] == "admin"){ ?>
+				<div class="dashboard">
+					<div class="dashboard-item">
+						<i class="fa fa-users"></i>
+						<span><?=$num_users?> Employee(s)</span>
+					</div>
+					<div class="dashboard-item">
+						<i class="fa fa-tasks"></i>
+						<span><?=$c_task?> All Tasks</span>
+					</div>
+					<div class="dashboard-item">
+						<i class="fa fa-window-close-o"></i>
+						<span><?=$overdue_task?> Overdue</span>
+					</div>
+					<div class="dashboard-item">
+						<i class="fa fa-clock-o"></i>
+						<span><?=$nodeadline_task?> No Deadline</span>
+					</div>
+					<div class="dashboard-item">
+						<i class="fa fa-exclamation"></i>
+						<span><?=$duetoday_task?> Due Today</span>
+					</div>
+					<div class="dashboard-item">
+						<i class="fa fa-bell"></i>
+						<span><?=$c_task?> Notifications</span>
+					</div>
+				</div>
+			<?php } ?>
 
 		</section>
 	</div>

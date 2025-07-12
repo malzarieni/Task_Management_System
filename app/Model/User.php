@@ -14,6 +14,14 @@ function get_all_users($conn){
 	return $users;
 }
 
+function count_users($conn){
+	$sql = "SELECT id FROM users WHERE role = 'employee' ";
+	$stmt = $conn->prepare($sql);
+	$stmt->execute([]);
+
+	return $stmt->rowCount();
+}
+
 
 function insert_user($conn, $data){
 	$sql = "INSERT INTO users (full_name, username, password, role) VALUES(?,?,?,?)";
