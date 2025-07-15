@@ -36,8 +36,11 @@ if (isset($_POST['title']) && isset($_POST['description']) && isset($_POST['due_
 		exit();
 	}else{
 		include "Model/Task.php";
+		include "Model/Notification.php";
 		$data = array($title,$description,$assigned_to,$due_date);
 		insert_task($conn, $data);
+		$notif_data = array("'$title' has been assigned to you. Please review & start working on it.",$assigned_to,'New Task Asssigned');
+		insert_notification($conn, $notif_data);
 
 		$em = "Task Created Succesfully";
 		header("Location: ../create_task.php?success=$em");

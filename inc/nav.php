@@ -7,7 +7,7 @@
 </html>
 <nav class="side-bar">
 			<div class="user-p">
-				<img src="img/user.jpg">
+				<img src="img/user1.jpg">
 				<h4>@<?=$_SESSION['username']?></h4>
 			</div>
 			
